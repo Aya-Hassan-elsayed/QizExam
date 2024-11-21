@@ -1,0 +1,82 @@
+/* Main container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+  }
+  
+  /* Card styling */
+  .child {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .parent {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form and row styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 10px;
+  }
+  
+  /* Material input fields styling */
+  mat-form-field {
+    width: 100%;
+  }
+  
+  /* Submit button and link styling */
+  button {
+    padding: 12px 20px;
+    background-color: #003979;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #003979;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,36 @@
+
+<div class="form-container">
+    <div class="child">
+        <div class="parent">
+          <h1>Create test</h1>
+        </div>
+   
+    <form [formGroup]="taskform" (ngSubmit)="sumbit()">
+        <div>
+            <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Title</mat-label>
+            <input  matInput type="text"  formControlName="title" name="title" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" class="w-100">
+
+            <mat-label for="time">time Per Question (in minutes):</mat-label>
+            <input matInput type="number" id="time" formControlName="timePerQuestion" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" class="w-100">
+
+            <mat-label for="description">description</mat-label>
+            <textarea   matInput id="description" formControlName="description" required></textarea>
+            </mat-form-field>
+        </div>
+       
+        <button mat-raised-button color="primary" type="submit" >Create Test</button>
+
+
+        
+    </form>
+
+</div>
