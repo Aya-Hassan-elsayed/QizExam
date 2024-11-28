@@ -12,8 +12,8 @@ export const routes: Routes = [
     {path:'Login',component:LoginComponent},
     {path:'admin/dashboard',component:DashboardComponent},
     {path:'admin/create-task' ,component:CreateTestComponent},
-    {path:'admin/view-task',component:ViewTestComponent},
-    {path:'admin/add-question',component:AddQuestingComponent}
+    {path:'admin/view-task/:id',component:ViewTestComponent},
+    {path:'admin/add-question/:id',component:AddQuestingComponent}
 
     
 ];

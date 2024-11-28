@@ -5,7 +5,7 @@
           <h1>Create test</h1>
         </div>
    
-    <form [formGroup]="taskform" (ngSubmit)="sumbit()">
+    <form [formGroup]="taskform" (ngSubmit)="submit()">
         <div>
             <mat-form-field appearance="fill" class="w-100">
             <mat-label>Title</mat-label>
@@ -15,7 +15,7 @@
         <div>
             <mat-form-field appearance="fill" class="w-100">
 
-            <mat-label for="time">time Per Question (in minutes):</mat-label>
+            <mat-label for="time">time Per Question (in seconds):</mat-label>
             <input matInput type="number" id="time" formControlName="timePerQuestion" required>
             </mat-form-field>
         </div>

@@ -1,0 +1,71 @@
+
+mat-form-field {
+    width: 100%; 
+    margin-bottom: 15px; 
+  }
+  
+ 
+  mat-form-field input {
+    color: #333; 
+    font-size: 16px; 
+  }
+  
+
+  mat-label {
+    color: #444; 
+    font-size: 14px; 
+  }
+  
+ 
+  mat-radio-button {
+    margin-right: 10px; 
+    font-size: 14px; 
+    vertical-align: middle; 
+  }
+  
+ 
+  .questBtn button {
+    font-size: 16px;
+    padding: 12px 20px; 
+    margin-top: 20px; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3f51b5;
+    color: white;
+    height: auto;
+   
+    border: none;
+   
+  }
+  
+  /* Container for the form */
+  .new-exam {
+    padding-top: 100px;
+    padding: 50px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 1000px;
+    margin: auto; 
+  }
+  
+  .answers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .answer-option {
+    display: flex;
+    align-items: center; /* Vertically align the radio button and input */
+    gap: 10px; /* Add space between the radio button and the input */
+    flex: 1 1 48%; /* Flex to make them responsive */
+  }
+  
+  .answer-option mat-radio-button {
+    margin-right: 10px; 
+  }
+  
+  
+  

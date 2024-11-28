@@ -1,1 +1,31 @@
-<p>view-test works!</p>
+<div class="examBox">
+    <div class="quizBox">
+
+<mat-card *ngFor="let item of specficQuestions; let i = index" class="test-card"> 
+    <strong><span class="text-danger"> question</span> .  {{ item.question }} ?</strong> 
+    <div class="row" >
+        <div class="col-sm-12">
+            <span> option 1 :{{item.answer1}}</span>
+        </div>
+        <div class="col-sm-12">
+            <span> option 2 :{{item.answer2}}</span>
+        </div>
+        <div class="col-sm-12">
+            <span> option 3 :{{item.answer3}}</span>
+        </div>
+        <div class="col-sm-12">
+            <span> option 4 :{{item.answer4}}</span>
+        </div>
+        <div class="col-sm-12">
+            <span class="text-success">Correct Answer: {{ item.correctAnswer }} </span>
+        </div>
+        <div class=" justify-end" >
+            <button  class="btn" (click)="deleteQuestion(item.id)"> Delete</button>
+        </div>
+        
+    </div>
+
+</mat-card>  
+    </div>
+</div>
+  

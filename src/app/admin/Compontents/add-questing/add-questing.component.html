@@ -1,1 +1,55 @@
-<p>add-questing works!</p>
+<div class="new-exam">
+    <div class="question">
+      <form [formGroup]="QuestionForm">
+        <!-- Question Title Field -->
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Question Title</mat-label>
+          <input matInput type="text" formControlName="question" placeholder="Enter your question title" />
+        </mat-form-field>
+  
+        <!-- Answer Options -->
+        <div class="answers-container">
+          <div class="answer-option">
+            <mat-radio-button value="answer1"  (change)="getcorrect($event)"color="warn"></mat-radio-button>
+            <mat-form-field color="warn" appearance="fill" class="w-100">
+              <mat-label>Option A</mat-label>
+              <input matInput type="text" formControlName="answer1" placeholder="Enter option A" />
+            </mat-form-field>
+          </div>
+  
+          <div class="answer-option">
+            <mat-radio-button value="answer2"  (change)="getcorrect($event)" color="warn"></mat-radio-button>
+            <mat-form-field color="warn" appearance="fill" class="w-100">
+              <mat-label>Option B</mat-label>
+              <input matInput type="text" formControlName="answer2" placeholder="Enter option B" />
+            </mat-form-field>
+          </div>
+  
+          <div class="answer-option">
+            <mat-radio-button value="answer3" (change)="getcorrect($event)" color="warn"></mat-radio-button>
+            <mat-form-field color="warn" appearance="fill" class="w-100">
+              <mat-label>Option C</mat-label>
+              <input matInput type="text" formControlName="answer3" placeholder="Enter option C" />
+            </mat-form-field>
+          </div>
+  
+          <div class="answer-option">
+            <mat-radio-button value="answer4" (change)="getcorrect($event)"  color="warn"></mat-radio-button>
+            <mat-form-field color="warn" appearance="fill" class="w-100">
+              <mat-label>Option D</mat-label>
+              <input matInput type="text" formControlName="answer4" placeholder="Enter option D" />
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <!-- Save Button -->
+        <div class=" row questBtn">
+            <button mat-raised-button color="primary" (click)="createQuestion()">
+                Save
+              </button>         
+               <button mat-raised-button [disabled]="QuestionForm.invalid" (click)="submit()">Finish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

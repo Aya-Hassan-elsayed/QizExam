@@ -1,60 +1,64 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../../Shared Module/shared/shared.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AdminServiceService } from '../../service/admin-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { identifierName } from '@angular/compiler';
 
 @Component({
   selector: 'app-create-test',
   standalone: true,
-  imports: [SharedModule, MatFormFieldModule,
-    MatInputModule],
+  imports: [SharedModule, MatFormFieldModule, MatInputModule],
   templateUrl: './create-test.component.html',
-  styleUrl: './create-test.component.css'
+  styleUrls: ['./create-test.component.css']  // Fixed the styleUrl typo to styleUrls
 })
-export class CreateTestComponent  implements OnInit{
+export class CreateTestComponent implements OnInit {
+  taskform!: FormGroup;
+  testId!: string; // سيتم تخزين الـ testId هنا
+
   
-  taskform!:FormGroup
-  tests: { title: string; timePerQuestion: number; description: string }[] = [];
-  constructor( private services:AdminServiceService ,private fb:FormBuilder){}
-  
- 
+  constructor(
+    private services: AdminServiceService,
+    private fb: FormBuilder,
+    private route: Router,
+    private toaster: ToastrService
+  ) {}
 
   ngOnInit(): void {
-    this.createForm()
-    
+    this.createForm();
   }
+
   createForm(): void {
     this.taskform = this.fb.group({
       title: ['', [Validators.required]],
       timePerQuestion: ['', Validators.required],
       description: ['', Validators.required],
-
-
     });
   }
-  sumbit(){
-    const model={
-      title:this.taskform.value.title,
-      timePerQuestion:this.taskform.value.timePerQuestion,
-      description:this.taskform.value.description
 
+  submit(): void {
+    if (this.taskform.valid) {
+      const model = {
+        
+        title: this.taskform.value.title,
+        timePerQuestion: this.taskform.value.timePerQuestion,
+        description: this.taskform.value.description,
+      };
 
+      this.services.createtest(model).subscribe(
+        (res) => {
+          this.testId=res.id
+          this.toaster.success('Test created successfully!');
+          this.route.navigate(['/admin/dashboard']);
+        },
+        (error) => {
+          this.toaster.error('Failed to create test');
+          console.error(error);
+        }
+      );
     }
-    if(this.taskform.valid){
-      this.services.createtest(model).subscribe(res=>{
-        console.log(res)
-
-    
-   
-
-
-    })
   }
-
-    }
-  }
-
-
-
+}
