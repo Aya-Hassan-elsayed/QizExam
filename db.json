@@ -21,36 +21,23 @@
     {
       "id": "1",
       "title": "Beginner Level Developer Test",
-      "timePerQuestion": "5",
+      "timePerQuestion": 6000,
       "description": "Basic level Question for entity -level developers",
-      "question": [
-        {
-          "question": "What does HTML stand for?",
-          "answer1": "HyperText Markup Language",
-          "answer2": "HyperText Management Language",
-          "answer3": "HyperTool Multi Language",
-          "answer4": "None of the above",
-          "correctAnswer": "HyperText Markup Language"
-        }
-      ]
+   
     },
     {
       "id": "2",
       "title": "junior Level Developer Test",
-      "timePerQuestion": 5,
+      "timePerQuestion": 6000,
       "description": "intermediate level questions for junior developers",
-      "question": [
-        {}
-      ]
+   
     },
     {
       "id": "3",
       "title": "Advance Problem sloving challeng",
-      "timePerQuestion": 60,
+      "timePerQuestion": 6000,
       "description": "This test assesses the ability to process information to solve problems, draw logical conclusions and draw links Problem solving is the ability that enables individuals to evaluate and respond to unexpected situations or deal with new or unfamiliar problems",
-      "question": [
-        {}
-      ]
+     
     },
     {
       "id": "ef32",
@@ -109,19 +96,6 @@
           "answer3": "HyperTool Multi Languag",
           "answer4": "None of the above\"",
           "correctAnswer": "HyperText Markup Language"
-        }
-      ]
-    },
-    {
-      "id": "1",
-      "questions": [
-        {
-          "question": "gfhgnh",
-          "answer1": "jkj",
-          "answer2": "yji7uy",
-          "answer3": "uyiik",
-          "answer4": "uui",
-          "correctAnswer": "uyiik"
         }
       ]
     }

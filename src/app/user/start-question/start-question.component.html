@@ -1,0 +1,33 @@
+<div *ngIf="!examEnded; else examOver">
+  <!-- عرض العداد -->
+  <div class="timer">
+    <h3>الوقت المتبقي: {{ remainingTime }} ثانية</h3>
+  </div>
+
+  <!-- عرض الأسئلة -->
+  <mat-card>
+    <div>
+      <h2>Question {{ currentQuestionIndex + 1 }}: {{ specficQuestions[currentQuestionIndex].question }}</h2>
+      <form>
+        <ul>
+          <li *ngFor="let answer of [specficQuestions[currentQuestionIndex]?.answer1, specficQuestions[currentQuestionIndex]?.answer2, specficQuestions[currentQuestionIndex]?.answer3, specficQuestions[currentQuestionIndex]?.answer4]">
+            <label>
+              <input
+                type="radio"
+                name="answer"
+                [value]="answer"
+                (change)="getcorrect($event)"
+              />
+              {{ answer }}
+            </label>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <button class="btn" (click)="submit()">Submit</button>
+  </mat-card>
+</div>
+
+<ng-template #examOver>
+  <h2>الامتحان انتهى! شكراً لك.</h2>
+</ng-template>

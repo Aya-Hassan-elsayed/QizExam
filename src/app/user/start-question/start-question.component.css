@@ -1,0 +1,87 @@
+/* Card styling */
+mat-card {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Question heading */
+  mat-card h2 {
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #c21606;
+    font-weight: bold;
+  }
+  
+  /* Styling the timer */
+  .timer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .timer h3 {
+    font-size: 20px;
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  /* Styling the list of options */
+  ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+  }
+  
+  /* Styling individual options */
+  li {
+    margin-bottom: 15px;
+  }
+  
+  li label {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    
+    color: #555;
+    cursor: pointer;
+  }
+  
+  /* Styling radio buttons */
+  li input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and text */
+    accent-color: #ff1500; /* Custom radio button color */
+    transform: scale(1.2); /* Increase size for better visibility */
+  }
+  
+  /* Hover effect for options */
+  li:hover {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  /* Styling the submit button */
+  button.btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #45a049;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  /* Disable focus outline for better appearance */
+  button.btn:focus {
+    outline: none;
+  }
+ 
+  

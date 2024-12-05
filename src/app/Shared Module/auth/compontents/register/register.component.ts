@@ -33,7 +33,8 @@ export class RegisterComponent implements OnInit {
     this.userForm=this.fb.group({
       username:["",[Validators.required]],
       email:["",[Validators.required]],
-     password:["",[Validators.required]]
+     password:["",[Validators.required]],
+     role:'user'
     })
   }
   getUser(){
@@ -48,7 +49,8 @@ export class RegisterComponent implements OnInit {
     const model={
       username:this.userForm.value.username,
       email:this.userForm.value.email,
-      password:this.userForm.value.password
+      password:this.userForm.value.password,
+      role:this.userForm.value.role
     }
     let index=this.users.findIndex(item=>item.email ==this.userForm.value.email)
     if(index!==-1){
